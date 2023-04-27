@@ -1,0 +1,59 @@
+.hero {
+    position: relative;
+    &__mini_sub {
+      margin-bottom: 0px;
+      font-weight: 5;
+      font-size: 20px;
+      line-height: 22px;
+      /* identical to box height */
+  
+      letter-spacing: 0.363354px;
+      text-transform: uppercase;
+  
+      color: #5e5e5e;
+    }
+    &__container {
+      & h1 {
+        font-size: 58px;
+        margin-top: 0px;
+      }
+    }
+    &__inner {
+      display: flex;
+      margin-top: 150px;
+    }
+    &__col_left {
+      width: 50%;
+    }
+    &__col_right {
+      width: 50%;
+    }
+    &__img_left {
+      width: 50%;
+      padding-right: 30px;
+      padding-left: 15px;
+      border-right: 1px solid #000;
+    }
+    &__img_right {
+      width: 50%;
+      padding-right: 15px;
+      padding-left: 30px;
+    }
+  }
+  
+  .aboutus {
+    background: #fff;
+    &__inner {
+      display: flex;
+    }
+    &__col {
+      flex: 1;
+      padding: 40px;
+      background-color: #f9fafe;
+      margin-left: 20px;
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+  }
+  

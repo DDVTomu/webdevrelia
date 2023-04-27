@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "HKNova";
+  src: url("../fonts/HKNova-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/HKNova-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/HKNova-Regular.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/HKNova-Regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/HKNova-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/HKNova-Regular.svg") format("svg"); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HKNova";
+  src: url("../fonts/HKNova-Medium.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/HKNova-Medium.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/HKNova-Medium.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/HKNova-Medium.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/HKNova-Medium.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/HKNova-Medium.svg") format("svg"); /* Legacy iOS */
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HKNova";
+  src: url("../fonts/HKNova-ExtraBold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/HKNova-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/HKNova-ExtraBold.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/HKNova-ExtraBold.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/HKNova-ExtraBold.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/HKNova-ExtraBold.svg")
+      format("svg"); /* Legacy iOS */
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HKNova";
+  src: url("../fonts/HKNova-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/HKNova-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/HKNova-Bold.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/HKNova-Bold.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/HKNova-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/HKNova-Bold.svg") format("svg"); /* Legacy iOS */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HKNova";
+  src: url("../fonts/HKNova-Heavy.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/HKNova-Heavy.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/HKNova-Heavy.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/HKNova-Heavy.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/HKNova-Heavy.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/HKNova-Heavy.svg") format("svg"); /* Legacy iOS */
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
