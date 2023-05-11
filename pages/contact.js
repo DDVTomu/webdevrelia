@@ -52,7 +52,7 @@ const ContactPage = () => {
               <ul className="list-inline nav-social">
                 <li>
                   <a
-                    href="https://twitter.com/ReliaSoftware"
+                    href="https://twitter.com/softwarerelia"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
