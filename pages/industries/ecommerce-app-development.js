@@ -4,7 +4,7 @@ import PageTitle from "@components/pageTitle"
 import Layout from "@components/common/layout"
 import SEO from "@components/seo"
 import Image from "next/image"
-import Animation from "@components/common/Animation"
+// import div from "@components/common/div"
 import ogpImage from "assets/images/industries/ecommerce-app-development-for-startup-company.jpg"
 
 const IndustriesPage = () => {
@@ -23,14 +23,14 @@ const IndustriesPage = () => {
           <Image alt="Ecommerce app development" src="/images/industries/ecommerce-app-development-for-startup-company.jpg"
             width={1125} height={750} layout="intrinsic" loading="eager" />
           <div className="industries-choose">
-            <Animation className="heading">
+            <div className="heading">
               <h2 className="hdg-lv2">
                 State-of-the-art{" "}
                 <span className="text-white">E-commerce</span> Web Application
                 Development
               </h2>
-            </Animation>
-            <Animation className="industries-choose__content">
+            </div>
+            <div className="industries-choose__content">
               <p>
                 E-commerce web and mobile applications should have the epitome
                 of technology integration and functionalities development to
@@ -43,7 +43,7 @@ const IndustriesPage = () => {
                 Here are some of the necessary features every E-commerce
                 application should have:
               </h6>
-              <Animation className="industries-choose__list">
+              <div className="industries-choose__list">
                 <ul className="list-plus">
                   <li>Simple Registration Process</li>
                   <li>Visually Appealing Themes</li>
@@ -62,15 +62,15 @@ const IndustriesPage = () => {
                   <li>Multi-lingual and Vendor Support</li>
                   <li>Product Categorization</li>
                 </ul>
-              </Animation>
-            </Animation>
+              </div>
+            </div>
           </div>
           <div className="box-media">
-            <Animation className="box-media__img">
+            <div className="box-media__img">
               <Image alt="Ecommerce app development for startup company" src="/images/industries/ecommerce-app-development.jpg"
                 width={626} height={417} layout="intrinsic" loading="eager" />
-            </Animation>
-            <Animation className="box-media__text">
+            </div>
+            <div className="box-media__text">
               <h2 className="hdg-lv2">
                 <span>Our robots’</span> AI skills help you keep ahead of the
                 compliance and regulation game
@@ -81,17 +81,17 @@ const IndustriesPage = () => {
                 demo showing how Relia robots automate Know Your Customer
                 (KYC) using Machine Learning and Natural Language
               </p>
-            </Animation>
+            </div>
           </div>
         </div>
-        <Animation className="back-office">
+        <div className="back-office">
           <div className="container">
             <h2 className="hdg-lv2">
               Boost Your Revenue with Data-driven and{" "}
               <span>Technology-powered</span> App Development
             </h2>
             <div className="back-office__row">
-              <Animation className="back-office__col">
+              <div className="back-office__col">
                 <Image alt="" src="/images/icon/icon-screen.svg"
                   width={71} height={66} layout="intrinsic" loading="eager" />
                 <h6>AI-powered Recommendations</h6>
@@ -102,8 +102,8 @@ const IndustriesPage = () => {
                   crucial role in coming up with recommendations that increase
                   the conversion rate.
                 </p>
-              </Animation>
-              <Animation className="back-office__col">
+              </div>
+              <div className="back-office__col">
                 <Image alt="" src="/images/icon/icon-tap.svg"
                   width={86} height={66} layout="intrinsic" loading="eager" />
                 <h6>Personalized Discounts</h6>
@@ -114,8 +114,8 @@ const IndustriesPage = () => {
                   Our websites and applications assist in tailoring attractive
                   discounts to increase buying percentage.
                 </p>
-              </Animation>
-              <Animation className="back-office__col">
+              </div>
+              <div className="back-office__col">
                 <Image alt="" src="/images/icon/icon-ai.svg"
                   width={86} height={82} layout="intrinsic" loading="eager" />
                 <h6>Custom Technology Integration</h6>
@@ -127,13 +127,13 @@ const IndustriesPage = () => {
                   integrated with our custom E-commerce app development
                   services.
                 </p>
-              </Animation>
+              </div>
             </div>
           </div>
-        </Animation>
+        </div>
         <div className="container">
           <div className="box-heavy">
-            <Animation className="box-heavy__head">
+            <div className="box-heavy__head">
               <h3>
                 79% of customers shop through mobile E-commerce applications
               </h3>
@@ -145,9 +145,9 @@ const IndustriesPage = () => {
                 src="/images/industries/ecommerce-web-app.jpg"
                 width={626} height={376} layout="intrinsic" loading="eager"
               />
-            </Animation>
+            </div>
             <div className="box-heavy__content">
-              <Animation className="box-heavy__inner">
+              <div className="box-heavy__inner">
                 <h2 className="hdg-lv2">
                   Maximize Your Engagement with <span>E-commerce</span> Mobile
                   App Development
@@ -168,11 +168,11 @@ const IndustriesPage = () => {
                   With E-commerce mobile app development, the farthest you are
                   away from your customers is their arms’ reach.
                 </p>
-              </Animation>
+              </div>
             </div>
           </div>
           <div className="box-media">
-            <Animation className="box-media__text">
+            <div className="box-media__text">
               <h2 className="hdg-lv2">
                 Why Startups and Enterprises{" "}
                 <span className="text-white">Trust</span> Relia Software for
@@ -206,18 +206,18 @@ const IndustriesPage = () => {
                   in security to build highly-secured E-commerce applications.
                 </li>
               </ul>
-            </Animation>
-            <Animation className="box-media__img">
+            </div>
+            <div className="box-media__img">
               <Image alt="Ecommerce app development company in vietnam" src="/images/industries/ecommerce-app-development-company-in-vietnam.jpg"
                 width={1050} height={700} layout="intrinsic" loading="eager" />
-            </Animation>
+            </div>
           </div>
           <h2 className="hdg-lv2">
             Transform Your Ideas into Business Solutions
             <br /> with the Right <span>E-commerce</span> Development Partner
           </h2>
           <div className="list-operations">
-            <Animation className="list-operations__col">
+            <div className="list-operations__col">
               <Image alt="" src="/images/icon/icon-shield.svg"
                 width={70} height={81} layout="intrinsic" loading="eager" />
               <h5>Impress Your Customers with Your MVP</h5>
@@ -230,8 +230,8 @@ const IndustriesPage = () => {
                 <li>Highly Scalable</li>
                 <li>Support & Maintenance</li>
               </ul>
-            </Animation>
-            <Animation className="list-operations__col">
+            </div>
+            <div className="list-operations__col">
               <Image alt="" src="/images/icon/icon-loss.svg"
                 width={55} height={85} layout="intrinsic" loading="eager" />
               <h5>Hybrid and Native E-commerce App Development</h5>
@@ -244,8 +244,8 @@ const IndustriesPage = () => {
                 <li>iOS E-commerce App Development</li>
                 <li>Cross-platform E-commerce App Development</li>
               </ul>
-            </Animation>
-            <Animation className="list-operations__col">
+            </div>
+            <div className="list-operations__col">
               <Image alt="" src="/images/icon/icon-update.svg"
                 width={72} height={72} layout="intrinsic" loading="eager" />
               <h5>Custom E-commerce App Development​</h5>
@@ -258,14 +258,14 @@ const IndustriesPage = () => {
                 <li>Data-driven App Development</li>
                 <li>Industries We Serve</li>
               </ul>
-            </Animation>
+            </div>
           </div>
           <div className="box-media">
-            <Animation className="box-media__img">
+            <div className="box-media__img">
               <Image alt="" src="/images/industries/img-note.png"
                 width={535} height={355} layout="intrinsic" loading="eager" />
-            </Animation>
-            <Animation className="box-media__text">
+            </div>
+            <div className="box-media__text">
               <h2 className="hdg-lv2">
                 <span className="text-white">Need</span> for more info?
               </h2>
@@ -281,7 +281,7 @@ const IndustriesPage = () => {
               <a className="btn" href="/contact">
                 CONTACT US TODAY
               </a>
-            </Animation>
+            </div>
           </div>
         </div>
       </div>
