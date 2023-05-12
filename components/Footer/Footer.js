@@ -25,18 +25,13 @@ const Footer = () => {
   const { logo, siteName } = useContext(GlobalContext);
   const menus = [
     {
-      id: 3,
-      name: "About us",
-      slug: "about-us",
-    },
-    {
       id: 1,
       name: "Services",
       slug: "services",
     },
     {
       id: 2,
-      name: "Work",
+      name: "Portfolio",
       slug: "portfolio",
     },
     {
@@ -87,7 +82,7 @@ const Footer = () => {
             <h5 className="col__title">Follow</h5>
             <ul className="list-inline nav-social">
               <li>
-                <a href="https://twitter.com/ReliaSoftware" className="btn btn-twitter" rel="noopener noreferrer" aria-label="social twitter">
+                <a href="https://twitter.com/softwarerelia" className="btn btn-twitter" rel="noopener noreferrer" aria-label="social twitter">
                   <IconTwitter />
                 </a>
               </li>

@@ -1,5 +1,5 @@
 import Layout from "@components/common/layout";
-import NotFound from "@components/NotFound/notFound";
+import NotFound from "@components/NotFound/NotFound";
 export default function FourOhFour() {
   return (
     <Layout>

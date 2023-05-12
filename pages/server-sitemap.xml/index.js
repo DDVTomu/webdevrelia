@@ -10,17 +10,32 @@ export const getServerSideProps = async (ctx) => {
   let portfolios = await fetchAPI(
     "portfolios?pagination[pageSize]=100&populate=*&sort[0]=publishedAt:DESC"
   );
+
+  let careers = await fetchAPI(
+    "careers?pagination[pageSize]=100&populate=*&sort[0]=publishedAt:DESC"
+  );
   const blogSiteMap = blogs?.data?.map((item) => ({
     loc: `${siteUrl}/blog/${item.attributes.slug}`,
     lastmod: new Date().toISOString(),
+    changefreq: "daily",
+    priority: 0.7,
   }));
 
   const portfolioSiteMap = portfolios?.data?.map((item) => ({
     loc: `${siteUrl}/portfolio/${item.attributes.slug}`,
     lastmod: new Date().toISOString(),
+    changefreq: "daily",
+    priority: 0.7,
   }));
 
-  const fields = [...blogSiteMap,...portfolioSiteMap];
+  const careerSiteMap = careers?.data?.map((item) => ({
+    loc: `${siteUrl}/career/${item.attributes.slug}`,
+    lastmod: new Date().toISOString(),
+    changefreq: "daily",
+    priority: 0.7,
+  }));
+
+  const fields = [...blogSiteMap,...portfolioSiteMap,...careerSiteMap];
 
   return getServerSideSitemapLegacy(ctx, fields);
 };
