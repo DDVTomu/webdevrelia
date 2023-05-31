@@ -8,7 +8,10 @@ const Animation = ({ children, className }) => (
       return (
         <div
           ref={ref}
-          className={`inView ${className} ${classNames()}`}
+          className={`inView ${className} ${classNames({
+            inView: true,
+            invisible: inView,
+          })}`}
         >
           {children}
         </div>

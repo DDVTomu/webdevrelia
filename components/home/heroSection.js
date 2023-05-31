@@ -1,9 +1,12 @@
 import Link from "next/link";
-import React from "react"
-import Animation from "@components/common/Animation"
+import React from "react";
+import Animation from "@components/common/Animation";
 import ExportedImage from "next/image";
+import { useAmp } from "next/amp";
+export const config = { amp: "true" };
 
 const HeroSection = React.memo(() => {
+  const loadAmp = useAmp();
   return (
     <div className="hero">
       <div className="container">
@@ -13,7 +16,10 @@ const HeroSection = React.memo(() => {
               <h1>Award Winning Innovation Driven Engineering</h1>
             </Animation>
             <Animation>
-              <p>Unlock the power of your busniness with intuitive, user-centric web and mobile apps.</p>
+              <p>
+                Unlock the power of your busniness with intuitive, user-centric
+                web and mobile apps.
+              </p>
             </Animation>
             <Animation>
               <Link href="/contact">
@@ -22,18 +28,28 @@ const HeroSection = React.memo(() => {
             </Animation>
           </div>
           <div className="hero-section-image">
-            <ExportedImage
-              src="/images/hero.png"
-              width={512}
-              height={668}
-              layout="intrinsic"
-              alt="Digital Solutions Development"
-              priority
-            />
+            {loadAmp ? (
+              <amp-img
+                src="/images/hero.png"
+                width={512}
+                height={668}
+                alt="Digital Solutions Development"
+                layout="intrinsic"
+              />
+            ) : (
+              <ExportedImage
+                src="/images/hero.png"
+                width={512}
+                height={668}
+                layout="intrinsic"
+                alt="Digital Solutions Development"
+                priority
+              />
+            )}
           </div>
         </div>
       </div>
     </div>
-  )
-})
-export default HeroSection
+  );
+});
+export default HeroSection;
