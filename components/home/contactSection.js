@@ -6,6 +6,8 @@ import ExportedImage from "next/image";
 import Animation from "@components/common/Animation"
 import "react-phone-number-input/style.css"
 import PhoneInput from "react-phone-number-input"
+import { useAmp } from "next/amp";
+export const config = { amp: "true" };
 
 const LoadingSubmit = () => (
   <div className="contact-loading">
@@ -25,6 +27,7 @@ const ContactForm = ({
   const onChangePhone = phone => {
     onUpdatePhone(phone)
   }
+  const loadAmp = useAmp();
   return (
     <div className="contact">
       {loading && <LoadingSubmit />}
@@ -38,6 +41,15 @@ const ContactForm = ({
         </Animation>
         <div className="contact__block">
           <div className="contact__block__map">
+          {loadAmp ? (
+              <amp-img
+              src="/images/home/contact-map.png"
+              width={597}
+              height={360}
+              layout="intrinsic"
+              alt="Work word"
+              />
+            ) : (
             <ExportedImage
               src="/images/home/contact-map.png"
               width={597}
@@ -45,7 +57,7 @@ const ContactForm = ({
               layout="intrinsic"
               alt="Work word"
               priority
-            />
+            />)}
           </div>
           <div className="contact__block__form">
             <form
