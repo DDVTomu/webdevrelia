@@ -8,19 +8,11 @@ const AMPImage = (props) =>{
         <>
             {loadAmp ? (
               <amp-img
-                src={props.src}
-                width={props.width}
-                height={props.height}
-                alt={props.alt}
-                layout={props.layout}
+              {...props}
               />
             ) : (
               <ExportedImage
-              src={props.src}
-              width={props.width}
-              height={props.height}
-              alt={props.alt}
-              layout={props.layout}
+              {...props}
               />
             )}
         </>
