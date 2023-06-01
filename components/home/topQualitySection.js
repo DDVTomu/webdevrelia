@@ -6,7 +6,7 @@ import Animation from "@components/common/Animation"
 const TopQualitySection = React.memo(() => (
   <div className="top-quality">
     <h2 className="hdg-lv2">
-      <ExportedImage
+      <AMPImage
         src="/images/home/top-quality.png"
         width={132}
         height={95}

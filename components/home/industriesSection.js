@@ -15,7 +15,7 @@ const Industries = React.memo(() => (
         <div className="industries__list__col">
           <Animation className="item">
             <div className="item__icon">
-              <ExportedImage
+              <AMPImage
                 src="/images/home/profits.png"
                 width={93}
                 height={86}
@@ -36,7 +36,7 @@ const Industries = React.memo(() => (
           </Animation>
           <Animation className="item">
             <div className="item__icon">
-              <ExportedImage
+              <AMPImage
                 src="/images/home/travel.png"
                 width={77}
                 height={100}
