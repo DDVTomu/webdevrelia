@@ -1,5 +1,5 @@
 import React from "react"
-import ExportedImage from "next/image";
+import AMPImage from "@components/common/Animation/AMPImage";
 import { ButtonView } from "@components/common/button"
 import Animation from "@components/common/Animation"
 
@@ -18,7 +18,7 @@ const TopQualitySection = React.memo(() => (
     <div className="container">
       <div className="top-quality__wrap">
         <Animation className="top-quality__col">
-          <ExportedImage
+          <AMPImage
             src="/images/home/logo-clutch.png"
             width={282}
             height={80}
@@ -34,7 +34,7 @@ const TopQualitySection = React.memo(() => (
           />
         </Animation>
         <Animation className="top-quality__col">
-          <ExportedImage
+          <AMPImage
             src="/images/home/logo-wadline.png"
             width={372}
             height={52}
@@ -50,7 +50,7 @@ const TopQualitySection = React.memo(() => (
           />
         </Animation>
         <Animation className="top-quality__col">
-          <ExportedImage
+          <AMPImage
             src="/images/home/logo-manifest.png"
             width={236}
             height={118}
@@ -66,7 +66,7 @@ const TopQualitySection = React.memo(() => (
           />
         </Animation>
         <Animation className="top-quality__col">
-          <ExportedImage
+          <AMPImage
             src="/images/home/logo-goodfirms.png"
             width={400}
             height={62}

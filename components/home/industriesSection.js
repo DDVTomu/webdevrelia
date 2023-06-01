@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react"
-import ExportedImage from "next/image";
+import AMPImage from "@components/common/Animation/AMPImage";
 import Animation from "@components/common/Animation"
 
 const Industries = React.memo(() => (
@@ -59,7 +59,7 @@ const Industries = React.memo(() => (
         <div className="industries__list__col">
           <Animation className="item">
             <div className="item__icon">
-              <ExportedImage
+              <AMPImage
                 src="/images/home/stethoscope.png"
                 width={78}
                 height={87}
@@ -81,7 +81,7 @@ const Industries = React.memo(() => (
           </Animation>
           <Animation className="item">
             <div className="item__icon">
-              <ExportedImage
+              <AMPImage
                 src="/images/home/reward.png"
                 width={93}
                 height={94}
@@ -103,7 +103,7 @@ const Industries = React.memo(() => (
         <div className="industries__list__col">
           <Animation className="item">
             <div className="item__icon">
-              <ExportedImage
+              <AMPImage
                 src="/images/home/mortarboard.png"
                 width={89}
                 height={90}
@@ -125,7 +125,7 @@ const Industries = React.memo(() => (
           </Animation>
           <Animation className="item">
             <div className="item__icon">
-              <ExportedImage
+              <AMPImage
                 src="/images/home/online-shop.png"
                 width={84}
                 height={83}
