@@ -104,4 +104,4 @@ const Config = {
     ];
   },
 };
-module.exports = withOffline(Config);
+module.exports = withBundleAnalyzer(Config);
