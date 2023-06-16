@@ -158,7 +158,7 @@ const PortfolioDetailPage = ({ portfolio = {}, portfolios }) => {
           className={`${styles.portfolio_content} ${styles.portfolio_design}`}
         >
           <div className="container">
-            <h2>DESIGN + DEVELOPMENT</h2>
+            <h2>SOLUTION</h2>
             <ReactMarkdown components={{ h2: HeadingRenderer }}>
               {portfolio[0].attributes.designAndDevelopment}
             </ReactMarkdown>

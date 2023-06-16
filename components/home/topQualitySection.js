@@ -1,12 +1,12 @@
 import React from "react"
-import AMPImage from "@components/common/Animation/AMPImage";
+import ExportedImage from "next/image";
 import { ButtonView } from "@components/common/button"
 import Animation from "@components/common/Animation"
 
 const TopQualitySection = React.memo(() => (
   <div className="top-quality">
     <h2 className="hdg-lv2">
-      <AMPImage
+      <ExportedImage
         src="/images/home/top-quality.png"
         width={132}
         height={95}
@@ -18,7 +18,7 @@ const TopQualitySection = React.memo(() => (
     <div className="container">
       <div className="top-quality__wrap">
         <Animation className="top-quality__col">
-          <AMPImage
+          <ExportedImage
             src="/images/home/logo-clutch.png"
             width={282}
             height={80}
@@ -26,15 +26,15 @@ const TopQualitySection = React.memo(() => (
             loading="lazy"
             alt="Clutch"
           />
-          <h5>Relia Software is Named a Top Developer in Asia by Clutch</h5>
+          <h5>Relia Software is Named in Top Vietnam Staff Augmentation Services by Clutch</h5>
           <ButtonView
             external
-            to="https://clutch.co/vn/developers/leaders-matrix"
+            to="https://clutch.co/vn/it-services/staff-augmentation/leaders-matrix"
             title="View review"
           />
         </Animation>
         <Animation className="top-quality__col">
-          <AMPImage
+          <ExportedImage
             src="/images/home/logo-wadline.png"
             width={372}
             height={52}
@@ -50,7 +50,7 @@ const TopQualitySection = React.memo(() => (
           />
         </Animation>
         <Animation className="top-quality__col">
-          <AMPImage
+          <ExportedImage
             src="/images/home/logo-manifest.png"
             width={236}
             height={118}
@@ -58,15 +58,15 @@ const TopQualitySection = React.memo(() => (
             loading="lazy"
             alt="The Manifest"
           />
-          <h5>Top Artificial Intelligence Developers 2019 - The Manifest</h5>
+          <h5>Top 20 Go Development Companies in Vietnam - The Manifest</h5>
           <ButtonView
             external
-            to="https://themanifest.com/artificial-intelligence/companies"
+            to="https://themanifest.com/vn/software-development/go/companies"
             title="View review"
           />
         </Animation>
         <Animation className="top-quality__col">
-          <AMPImage
+          <ExportedImage
             src="/images/home/logo-goodfirms.png"
             width={400}
             height={62}

@@ -9,18 +9,17 @@ import CloudImg from "@components/common/Image";
 import FormatDate from "@components/common/FormatDate/FormatDate";
 import BlogSocial from "@components/common/BlogSocial/BlogSocial";
 import PrevNext from "@components/common/PrevNext/PrevNext";
-
 function convertBlogData(item, isHasAuthor = false) {
   const attributes = item.attributes;
   const category = attributes?.category?.data?.attributes?.name;
   const thumnail = attributes?.thumnail?.data?.attributes;
   const author = isHasAuthor
     ? {
-      name: attributes?.author?.data?.attributes?.name,
-      position: attributes?.author?.data?.attributes?.position,
-      avatar:
-        attributes?.author?.data?.attributes?.avatar?.data?.attributes?.url,
-    }
+        name: attributes?.author?.data?.attributes?.name,
+        position: attributes?.author?.data?.attributes?.position,
+        avatar:
+          attributes?.author?.data?.attributes?.avatar?.data?.attributes?.url,
+      }
     : {};
   const tags = attributes?.tags?.data?.map?.((tag) => {
     return tag?.attributes?.name;
@@ -58,6 +57,74 @@ function generateLinkMarkup(str = "") {
     name: header.substring(3).trim().replace(/\*/g, " "),
   }));
 }
+
+// const CustomImage = ({ node, children }) => {
+//   if (node.children[0].tagName === "img") {
+//     const image = node.children[0];
+//     // console.log(image);
+//     return (
+//       <img
+//         class="blog__img"
+//         src={process.env.NEXT_PUBLIC_STRAPI_SERVER + image.properties.src}
+//         alt={image.properties.alt}
+//       />
+//     );
+//   }
+//   // Return default child if it's not an image
+//   return <p>{children}</p>;
+// };
+const CustomImage = ({ node, children }) => {
+  const imageNodes = node.children.filter((child) => child.tagName === "img");
+  if (imageNodes.length > 0) {
+    const renderedImages = imageNodes.map((image, index) => (
+      <img
+        key={index}
+        className="blog__img"
+        src={process.env.NEXT_PUBLIC_STRAPI_SERVER + image.properties.src}
+        alt={image.properties.alt}
+      />
+    ));
+
+    // Insert the rendered images into the original children array
+
+    const updatedChildren = React.Children.toArray(children);
+    for (let i = 0; i < updatedChildren.length; i++) {
+      if (updatedChildren[i].type === "img") {
+        delete updatedChildren[i];
+      }
+    }
+    updatedChildren.splice(1, 0, ...renderedImages);
+    return <p>{updatedChildren}</p>;
+  }
+
+  // Return default child if there are no image nodes
+  return <p>{children}</p>;
+};
+
+//   const updatedChildren = React.Children.map(children, (child) => {
+//     if (React.isValidElement(child) && child.props.node.tagName === "p") {
+//       const imageNodes = child.props.node.children.filter(
+//         (childNode) => childNode.tagName === "img"
+//       );
+
+//       if (imageNodes.length > 0) {
+//         const renderedImages = imageNodes.map((image, index) => (
+//           <img
+//             key={index}
+//             className="blog__img"
+//             src={process.env.NEXT_PUBLIC_STRAPI_SERVER + image.properties.src}
+//             alt={image.properties.alt}
+//           />
+//         ));
+
+//         return React.cloneElement(child, {}, renderedImages);
+//       }
+//     }
+//     return child;
+//   });
+
+//   return <>{updatedChildren}</>;
+// };
 
 const BlogDetailPage = ({ blog = {}, blogs, blogToggle = {} }) => {
   const seo = {
@@ -129,16 +196,14 @@ const BlogDetailPage = ({ blog = {}, blogs, blogToggle = {} }) => {
                 </time>
               </p>
             </div>
-            {
-              blog.author && (
-                <div className={styles.hero__top_header__blog_meta__col}>
-                  <p>
-                    <strong>Author Name</strong>
-                  </p>
-                  <p>{blog.author.name}</p>
-                </div>
-              )
-            }
+            {blog.author && (
+              <div className={styles.hero__top_header__blog_meta__col}>
+                <p>
+                  <strong>Author Name</strong>
+                </p>
+                <p>{blog.author.name}</p>
+              </div>
+            )}
 
             <div className={styles.hero__top_header__blog_meta__col}>
               <p>
@@ -153,7 +218,9 @@ const BlogDetailPage = ({ blog = {}, blogs, blogToggle = {} }) => {
         <div className={` ${"container"} ${styles.article__container}`}>
           <div className={styles.article__contents}>
             <div className={styles.article__entries} id="article_content">
-              <ReactMarkdown components={{ h2: HeadingRenderer }}>
+              <ReactMarkdown
+                components={{ h2: HeadingRenderer, p: CustomImage }}
+              >
                 {blog.content}
               </ReactMarkdown>
             </div>
@@ -164,16 +231,13 @@ const BlogDetailPage = ({ blog = {}, blogs, blogToggle = {} }) => {
                 height={94}
                 objectFit="cover"
               />
-              {
-                blog?.author && (
-                  <div>
-                    <p>THE AUTHOR</p>
-                    <h2>{blog?.author?.name}</h2>
-                    <h3>{blog?.author?.position}</h3>
-                  </div>
-                )
-              }
-
+              {blog?.author && (
+                <div>
+                  <p>THE AUTHOR</p>
+                  <h2>{blog?.author?.name}</h2>
+                  <h3>{blog?.author?.position}</h3>
+                </div>
+              )}
             </div>
             <BlogSocial tag={blog.tags} slug={blog.slug} />
           </div>

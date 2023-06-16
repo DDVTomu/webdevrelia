@@ -16,7 +16,16 @@ app
       "/service-worker.js",
       express.static(path.join(__dirname, ".next"))
     );
-
+    //Ducle <ducle.sg@gmail.com >
+    server.get(
+      "/googled167fa7eb99b435c.html",
+      express.static(path.join(__dirname, ""))
+    );
+    //relia <reliasoftware@gmail.com>
+    server.get(
+      "/google490bb7a34c31b77f.html",
+      express.static(path.join(__dirname, ""))
+    );
     server.get(
       "/sw.js",
       express.static(path.join(__dirname, ".next"))

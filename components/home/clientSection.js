@@ -4,8 +4,6 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick"
 import Animation from "@components/common/Animation"
-import { useAmp } from "next/amp";
-export const config = { amp: "true" };
 
 class ClientSection extends React.Component {
   render() {

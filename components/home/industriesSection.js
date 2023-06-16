@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react"
-import AMPImage from "@components/common/Animation/AMPImage";
+import ExportedImage from "next/image";
 import Animation from "@components/common/Animation"
 
 const Industries = React.memo(() => (
@@ -15,7 +15,7 @@ const Industries = React.memo(() => (
         <div className="industries__list__col">
           <Animation className="item">
             <div className="item__icon">
-              <AMPImage
+              <ExportedImage
                 src="/images/home/profits.png"
                 width={93}
                 height={86}
@@ -36,7 +36,7 @@ const Industries = React.memo(() => (
           </Animation>
           <Animation className="item">
             <div className="item__icon">
-              <AMPImage
+              <ExportedImage
                 src="/images/home/travel.png"
                 width={77}
                 height={100}
@@ -59,7 +59,7 @@ const Industries = React.memo(() => (
         <div className="industries__list__col">
           <Animation className="item">
             <div className="item__icon">
-              <AMPImage
+              <ExportedImage
                 src="/images/home/stethoscope.png"
                 width={78}
                 height={87}
@@ -81,7 +81,7 @@ const Industries = React.memo(() => (
           </Animation>
           <Animation className="item">
             <div className="item__icon">
-              <AMPImage
+              <ExportedImage
                 src="/images/home/reward.png"
                 width={93}
                 height={94}
@@ -103,7 +103,7 @@ const Industries = React.memo(() => (
         <div className="industries__list__col">
           <Animation className="item">
             <div className="item__icon">
-              <AMPImage
+              <ExportedImage
                 src="/images/home/mortarboard.png"
                 width={89}
                 height={90}
@@ -125,7 +125,7 @@ const Industries = React.memo(() => (
           </Animation>
           <Animation className="item">
             <div className="item__icon">
-              <AMPImage
+              <ExportedImage
                 src="/images/home/online-shop.png"
                 width={84}
                 height={83}

@@ -534,13 +534,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -558,7 +558,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 
@@ -754,7 +754,7 @@ pre tt:after {
           visibility: visible;
 
           .navbar__nav {
-            &>li {
+            & > li {
               transform: scale(1) translateY(0px);
               opacity: 1;
 
@@ -818,7 +818,7 @@ pre tt:after {
         width: 100%;
         margin-left: 0;
 
-        &+.col {
+        & + .col {
           margin-top: 20px;
         }
       }
@@ -827,7 +827,7 @@ pre tt:after {
         .nav-footer {
           display: flex;
 
-          ul+ul {
+          ul + ul {
             margin-left: 50px;
           }
         }
@@ -888,7 +888,7 @@ pre tt:after {
         float: left;
         margin-bottom: 0;
 
-        &+.nav-footer {
+        & + .nav-footer {
           margin-left: 20px;
         }
 
@@ -1030,9 +1030,11 @@ pre tt:after {
 -------------------------------------------------- */
 .hero {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(219, 219, 219, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(219, 219, 219, 1) 100%
+  );
 
   .hero-section {
     display: flex;
@@ -1206,9 +1208,9 @@ pre tt:after {
         // &__content {
         //   padding-right: 0;
 
-        //   // @media only screen and (max-width: 767px) {
-        //   //   padding-right: 0;
-        //   // }
+        //   @media only screen and (max-width: 767px) {
+        //     padding-right: 0;
+        //   }
         // }
       }
     }
@@ -1243,7 +1245,7 @@ pre tt:after {
         li {
           margin-left: 0;
 
-          &+li {
+          & + li {
             margin-left: 2.5em;
 
             @media only screen and (max-width: 767px) {
@@ -1321,7 +1323,7 @@ pre tt:after {
         background: #fff;
         padding: 1.5625em;
 
-        &+.item {
+        & + .item {
           margin-top: 60px;
         }
 
@@ -1493,7 +1495,7 @@ pre tt:after {
       margin-top: 30px;
     }
 
-    &>div {
+    & > div {
       width: 50%;
       padding: 0 20px;
       box-sizing: border-box;
@@ -1606,7 +1608,7 @@ pre tt:after {
         }
       }
 
-      &+.item {
+      & + .item {
         margin-left: 7.875em;
 
         @media only screen and (max-width: 767px) {
@@ -1658,7 +1660,7 @@ pre tt:after {
       width: 100%;
       margin-left: 0;
 
-      &+& {
+      & + & {
         margin-top: 3em;
         padding-top: 3em;
         border-top: 1px solid rgba(65, 65, 93, 0.17);
@@ -1790,7 +1792,7 @@ pre tt:after {
         margin: 30px 0 0;
       }
 
-      &+.item {
+      & + .item {
         margin-left: 57px;
 
         @media only screen and (max-width: 767px) {
@@ -1942,7 +1944,7 @@ pre tt:after {
         &:focus {
           outline: 0;
 
-          &+label {
+          & + label {
             top: 0;
             font-size: 80%;
           }
@@ -2162,7 +2164,7 @@ pre tt:after {
       justify-content: center;
     }
 
-    &>li {
+    & > li {
       margin: 0 10px;
 
       &:last-child {
@@ -2175,7 +2177,7 @@ pre tt:after {
         transition: transform 0.5s cubic-bezier(0.4, 0.01, 0.165, 0.99),
           opacity 0.6s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
-        &+li {
+        & + li {
           margin-top: 30px;
         }
 
@@ -2484,7 +2486,7 @@ pre tt:after {
       display: inline-flex;
       align-items: center;
 
-      &+li {
+      & + li {
         margin-left: 2.625em;
       }
     }
@@ -2495,7 +2497,7 @@ pre tt:after {
     display: flex;
 
     li {
-      &+li {
+      & + li {
         margin-left: 2.625em;
       }
     }
@@ -2546,9 +2548,11 @@ pre tt:after {
           content: "";
           width: 50%;
           height: 100%;
-          background: linear-gradient(to right,
-              rgba(255, 255, 255, 0) 0%,
-              rgba(255, 255, 255, 0.3) 100%);
+          background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%
+          );
           transform: skewX(-25deg);
         }
       }
@@ -2771,7 +2775,7 @@ label {
     height: 0;
     width: 0;
 
-    &:checked~.checkmark {
+    &:checked ~ .checkmark {
       background-color: #e84118;
       border-color: #e84118;
 
@@ -2927,13 +2931,13 @@ label {
     align-items: center;
 
     ul {
-      &+ul {
+      & + ul {
         margin-left: 70px;
       }
     }
   }
 
-  &+.box-media {
+  & + .box-media {
     align-items: flex-start;
   }
 }
@@ -2994,7 +2998,7 @@ label {
   justify-content: center;
   align-items: center;
 
-  &+.box-heading {
+  & + .box-heading {
     margin-top: 80px;
 
     @media only screen and (max-width: 767px) {
@@ -3006,7 +3010,7 @@ label {
     flex-direction: column;
   }
 
-  &+& {
+  & + & {
     margin-top: 100px;
 
     @media only screen and (max-width: 767px) {
@@ -3014,7 +3018,7 @@ label {
     }
   }
 
-  &+.hdg-lv2 {
+  & + .hdg-lv2 {
     margin-top: 100px;
 
     @media only screen and (max-width: 767px) {
@@ -3066,7 +3070,7 @@ label {
       margin-bottom: 30px;
     }
 
-    +.box-media__text {
+    + .box-media__text {
       padding-right: 0;
     }
   }
@@ -3216,7 +3220,7 @@ label {
     }
   }
 
-  &+& {
+  & + & {
     margin-top: 100px;
 
     @media only screen and (max-width: 767px) {
@@ -3231,7 +3235,7 @@ label {
       width: 100%;
     }
 
-    &+#{$p}__text {
+    & + #{$p}__text {
       padding-left: 50px;
       padding-right: calc((100% - 1410px) / 2);
 
@@ -3288,7 +3292,7 @@ label {
       margin-left: 0;
       text-align: center;
 
-      &+& {
+      & + & {
         margin-top: 35px;
       }
     }
@@ -3600,7 +3604,7 @@ label {
       }
     }
 
-    &+.item {
+    & + .item {
       margin-top: 90px;
 
       @media only screen and (max-width: 767px) {
@@ -3685,7 +3689,7 @@ label {
       .col {
         text-align: left;
 
-        &+.col {
+        & + .col {
           margin-left: 40px;
 
           @media only screen and (max-width: 767px) {
@@ -3767,7 +3771,7 @@ label {
       width: 100%;
       padding-right: 0;
 
-      &+.item {
+      & + .item {
         margin-top: 30px;
       }
     }
@@ -3836,7 +3840,7 @@ label {
     margin: 20px 0 50px;
   }
 
-  &+.list-mobi {
+  & + .list-mobi {
     .item {
       margin-bottom: 120px;
       height: auto;
@@ -3968,7 +3972,7 @@ label {
     & div {
       display: block;
 
-      &+div {
+      & + div {
         margin-top: 70px;
       }
     }
@@ -4035,7 +4039,7 @@ label {
           line-height: 1.75;
         }
 
-        &+li {
+        & + li {
           margin-top: 35px;
         }
       }
@@ -4170,7 +4174,7 @@ label {
       }
     }
 
-    &+li {
+    & + li {
       margin-top: 35px;
     }
   }
@@ -4204,7 +4208,7 @@ label {
       color: #e84118;
     }
 
-    &+li {
+    & + li {
       margin-left: 25px;
     }
   }
@@ -4407,7 +4411,7 @@ label {
       margin: 0;
 
       li {
-        &+li {
+        & + li {
           margin-top: 66px;
 
           @media only screen and (max-width: 767px) {
@@ -4845,7 +4849,7 @@ label {
 
   .blog-post-content {
     p {
-      &>img {
+      & > img {
         display: inherit;
         margin: auto;
       }
@@ -5127,7 +5131,7 @@ label {
       color: #e85531;
     }
 
-    &+& {
+    & + & {
       &::before {
         content: "/";
         color: #050429;
@@ -5287,7 +5291,6 @@ label {
   }
 
   li {
-
     span,
     a {
       display: block;
@@ -5299,7 +5302,7 @@ label {
       color: #050429;
     }
 
-    &+li {
+    & + li {
       margin-left: 10px;
     }
   }
@@ -5317,7 +5320,7 @@ label {
   }
 
   li {
-    &+li {
+    & + li {
       margin-left: 15px;
     }
   }
@@ -5504,7 +5507,7 @@ label {
   }
 
   &__block {
-    &+& {
+    & + & {
       margin-top: 70px;
     }
 
@@ -5515,7 +5518,7 @@ label {
       li {
         margin-bottom: 0;
 
-        &+li {
+        & + li {
           border-top: 1px solid rgba(5, 4, 41, 0.11);
         }
 
@@ -5539,7 +5542,6 @@ label {
           }
 
           &:hover {
-
             dt,
             dd {
               font-weight: 600;
@@ -5668,5 +5670,11 @@ label {
     & .blog_tab {
       color: #e84118;
     }
+  }
+}
+
+.blog {
+  &__img {
+    margin: 23.2px 0px!important;
   }
 }
