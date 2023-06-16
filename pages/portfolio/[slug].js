@@ -27,7 +27,9 @@ function HeadingRenderer(props) {
 const PortfolioDetailPage = ({ portfolio = {}, portfolios }) => {
   const seo = {
     metaTitle: portfolio[0].attributes.projectName || "Portfolio",
-    metaDescription: portfolio[0].attributes.heroBanner.projectDescription || "Relia Portfolio",
+    metaDescription:
+      portfolio[0].attributes.heroBanner.projectDescription ||
+      "Relia Portfolio",
     shareImage: portfolio[0].attributes.heroBanner.heroImg.url,
     article: true,
   };
@@ -85,30 +87,50 @@ const PortfolioDetailPage = ({ portfolio = {}, portfolios }) => {
                   <span key={index}>{tag.tagName}</span>
                 ))}
               </p>
-              <div className={`${styles.portfolio_banner__apps}`}>
-                <Link href="#">
-                  <div className={`${styles.portfolio_banner__apps_logo}`}>
-                    <ExportedImage
-                      alt="Portfolio App Store"
-                      src="/images/img-app-store.png"
-                      objectFit="contain"
-                      width={200}
-                      height={58}
-                    />
-                  </div>
-                </Link>
-                <Link href="#">
-                  <div className={`${styles.portfolio_banner__apps_logo}`}>
-                    <ExportedImage
-                      alt="Portfolio Play"
-                      src="/images/img-google-play.png"
-                      objectFit="contain"
-                      width={200}
-                      height={58}
-                    />
-                  </div>
-                </Link>
-              </div>
+              {(portfolio[0].attributes.heroBanner.linkPlayStore != null) &
+              (portfolio[0].attributes.heroBanner.linkAppStore != null) ? (
+                <div className={`${styles.portfolio_banner__apps}`}>
+                  {portfolio[0].attributes.heroBanner.linkPlayStore != null &&
+                  portfolio[0].attributes.heroBanner.linkPlayStore != "#" ? (
+                    <Link
+                      href={portfolio[0].attributes.heroBanner.linkPlayStore}
+                    >
+                      <div className={`${styles.portfolio_banner__apps_logo}`}>
+                        <ExportedImage
+                          alt="Portfolio App Store"
+                          src="/images/img-app-store.png"
+                          objectFit="contain"
+                          width={200}
+                          height={58}
+                        />
+                      </div>
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                  {portfolio[0].attributes.heroBanner.linkAppStore != null &&
+                  portfolio[0].attributes.heroBanner.linkAppStore != "#" ? (
+                    <Link
+                      href={portfolio[0].attributes.heroBanner.linkAppStore}
+                    >
+                      <div className={`${styles.portfolio_banner__apps_logo}`}>
+                        <ExportedImage
+                          alt="Portfolio Play"
+                          src="/images/img-google-play.png"
+                          objectFit="contain"
+                          width={200}
+                          height={58}
+                        />
+                      </div>
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              ) : (
+                ""
+              )}
+
               <ButtonView
                 external
                 to={portfolio[0].attributes.heroBanner.linkWeb}
