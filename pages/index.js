@@ -45,7 +45,7 @@ const Home = ({ homepage, portfolios, blogs }) => {
 export async function getStaticProps() {
   const homepage = await fetchAPI("homepage");
   const portfolios = await fetchAPI(
-    "portfolios?pagination[pageSize]=3&populate=*&_limit=3"
+    "portfolios?pagination[pageSize]=3&populate=*&sort[0]=createdAt%3Adesc&_limit=3"
   );
   const blogs = await fetchAPI("blogs?pagination[pageSize]=3&populate=*&sort[0]=createdAt%3Adesc&_limit=3");
   return {

@@ -57,11 +57,11 @@ const Config = {
   // },
   images: {
     loader: "custom",
-    formats: ['image/webp'],
+    formats: ["image/webp"],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     domains: [process.env.NEXT_PUBLIC_STRAPI_HOST],
-    unoptimized: true
+    unoptimized: true,
   },
   transpilePackages: ["next-image-export-optimizer"],
   env: {
@@ -73,8 +73,17 @@ const Config = {
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
   i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
+    locales: ["en"],
+    defaultLocale: "en",
+  },
+  async redirects() {
+    return [
+      {
+        soruce: "/blogs/:path*",
+        destination: "/blogs/:path*",
+        permanent: false,
+      },
+    ];
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(
@@ -91,8 +100,8 @@ const Config = {
   experimental: {
     outputStandalone: true,
     images: {
-      unoptimized: true
-    }
+      unoptimized: true,
+    },
   },
 };
 module.exports = withOffline(Config);

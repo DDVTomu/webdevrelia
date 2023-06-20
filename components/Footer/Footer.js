@@ -109,7 +109,7 @@ const Footer = () => {
             <p>
               629 Nguyen Kiem, Ward 9, Phu Nhuan District, Ho Chi Minh City, Vietnam
             </p>
-            <p>Phone: +84.28.73042068</p>
+            <p>Phone: +84 35 9208574 </p>
           </Animation>
           <Animation className="col col-nav">
             <h6 style={{ marginTop: "15px" }}>USA</h6>

@@ -158,6 +158,20 @@ const PortfolioDetailPage = ({ portfolio = {}, portfolios }) => {
           </div>{" "}
         </div>
       </section>
+      {portfolio[0].attributes.Challenges ? (
+        <section
+          className={`${styles.portfolio_content} ${styles.portfolio_challenges}`}
+        >
+          <div className="container">
+            <h2>CHALLENGES</h2>
+            <ReactMarkdown components={{ h2: HeadingRenderer }}>
+              {portfolio[0].attributes.Challenges}
+            </ReactMarkdown>
+          </div>
+        </section>
+      ) : (
+        ""
+      )}
       {portfolio[0].attributes.scopeOfWork ? (
         <section
           className={`${styles.portfolio_content} ${styles.portfolio_scopes}`}
